@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { AnimationOptions } from 'ngx-lottie';
 import { environment } from 'src/environments/environment';
 
@@ -6,6 +6,7 @@ import { environment } from 'src/environments/environment';
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class HomeComponent {
   whatsappLink: string = environment.whatsappLink;
