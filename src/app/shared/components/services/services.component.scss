@@ -1,0 +1,38 @@
+.clip-wrap {
+  filter: drop-shadow(8px 0px 6px rgba(30, 30, 0, 0.4));
+}
+
+.diagonal-left {
+  -webkit-clip-path: polygon(0 0, 40% 0, 60% 100%, 0% 100%);
+  width: 100%;
+}
+
+.diagonal-right {
+  -webkit-clip-path: polygon(40% 0, 100% 0, 100% 100%, 60% 100%);
+}
+
+.left {
+  @apply z-50 top-0 left-0 h-full flex items-center justify-center;
+  background-image: linear-gradient(
+      rgba(14, 165, 233, 0.8),
+      rgba(99, 102, 241, 0.8)
+    ),
+    url("../../../../assets/img/little-boy-and-female-tutor.jpeg");
+  background-attachment: fixed;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.right {
+  @apply z-0 absolute m-0 top-0 right-0 w-full h-full flex items-center justify-center  bg-gradient-to-r from-emerald-500 to-teal-500;
+  background-image: linear-gradient(
+      rgba(99, 102, 241, 0.8),
+      rgba(59, 130, 246, 0.8)
+    ),
+    url("../../../../assets/img/male-tutor-and-little-girl.jpg");
+  background-attachment: fixed;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

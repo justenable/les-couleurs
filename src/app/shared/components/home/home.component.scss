@@ -1,0 +1,10 @@
+.hero {
+  @apply relative overflow-hidden w-full;
+  height: calc(100vh - 32px);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)),
+    url("../../../../assets/img/toddlers.jpg");
+  background-attachment: fixed;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

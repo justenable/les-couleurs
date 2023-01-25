@@ -1,0 +1,13 @@
+#whatsapp,
+#facebook {
+  path {
+    fill: #fff;
+  }
+
+  &:hover {
+    @apply bg-white text-blue-500;
+    path {
+      fill: #3b82f6;
+    }
+  }
+}

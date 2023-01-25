@@ -1,0 +1,72 @@
+<div class="w-full">
+  <div class="hero">
+    <div
+      class="relative flex space-y-12 justify-center flex-col h-full mx-auto items-center z-10 text-center text-white text-2xl max-w-7xl"
+    >
+      <!-- <h1 class="text-8xl font-bold text-center mb-10">Les Couleurs</h1> -->
+
+      <div class="flex justify-center items-center">
+        <img class="rounded-full shadow-lg w-3/4 " src="./assets/img/logo.jpg" alt="" />
+      </div>
+      <h2 class="text-3xl w-3/4">
+        {{ "GLOBAL.CLASSES_FOR_TODDLERS" | translate }}
+      </h2>
+    </div>
+  </div>
+  <div class="mx-auto px-10 pb-16 bg-white">
+    <div
+      class="text-lg text-center grid grid-cols sm:grid-cols-2 md:grid-cols-3 gap-4 mx-auto max-w-7xl relative bottom-10"
+    >
+      <div
+        class="bg-gradient-to-br from-blue-500 to-cyan-500 p-4 rounded-md shadow-md w-full flex items-center justify-center"
+      >
+        <p class="text-white">
+          2023 Annual Registration Fee:
+          <span class="font-bold">R100 (once Off)</span>
+        </p>
+      </div>
+      <div
+        class="bg-gradient-to-br from-red-500 to-amber-600 p-4 rounded-md shadow-md w-full flex items-center justify-center"
+      >
+        <p class="text-white">
+          2023 Term Fee: <span class="font-bold">R895</span> Pro rata (Every 3
+          Months)
+        </p>
+      </div>
+      <div
+        class="bg-gradient-to-br from-emerald-600 to-green-500 p-4 rounded-md shadow-md w-full flex items-center justify-center"
+      >
+        <p class="text-white">
+          2023 monthly fee: <span class="font-bold">R350</span>
+        </p>
+      </div>
+    </div>
+    <div class="text-2xl text-center">
+      <p>{{ "GLOBAL.WEEKLY_MINIMUM_MEETING" | translate }}</p>
+      <p>{{ "GLOBAL.WHAT_TODDLERS_DO" | translate }}</p>
+    </div>
+    <div class="flex justify-center items-center mt-10">
+      <a
+        [href]="encodeURI(whatsappLink)"
+        target="_blank"
+        class="py-4 px-10 uppercase text-bold text-2xl hover:text-white rounded-full hover:bg-red-600 shadow-sm hover:shadow-lg transition-all outline outline-red-500 text-red-500 hover:outline-transparent"
+        >Enroll Now</a
+      >
+    </div>
+  </div>
+  <div class="mx-auto px-10 bg-gray-50">
+    <div
+      class="py-16 flex justify-center items-center flex-col space-y-20 lg:space-y-0 lg:flex-row lg:space-x-20 max-w-7xl mx-auto"
+    >
+      <div>
+        <p
+          class="text-3xl text-center lg:text-left"
+          innerHTML="{{ 'GLOBAL.PROGRAM_METHODS' | translate }}"
+        ></p>
+      </div>
+      <div class="w-auto sm:w-3/4">
+        <ng-lottie [options]="options"></ng-lottie>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,131 @@
+<div>
+  <div
+    class="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold relative h-36 sm:h-56 md:h-64 lg:h-96"
+  >
+    <div class="relative z-10 clip-wrap h-full w-full">
+      <div class="left diagonal-left">
+        <h1
+          class="opacity-90 mt-2 sm:mr-[84px] mr-14 sm:mt-4 md:mt-6 md:mr-24 lg:mr-[132px] lg:mt-8 text-white"
+        >
+          {{ "GLOBAL.OUR" | translate }}
+        </h1>
+      </div>
+    </div>
+    <div class="diagonal-right right">
+      <h1
+        class="ml-36 mb-2 sm:ml-[228px] lg:ml-[364px] lg:mb-8 sm:mb-4 md:mb-6 md:ml-[280px] text-white"
+      >
+        {{ "GLOBAL.PROGRAM" | translate }}
+      </h1>
+    </div>
+    <div></div>
+  </div>
+  <section>
+    <div class="py-16">
+      <div class="max-w-7xl mx-auto px-10">
+        <h1 class="text-2xl mb-4 text-gray-700 text-center">
+          {{ "GLOBAL.LEARNING_MODELS" | translate }}
+        </h1>
+      </div>
+    </div>
+    <div class="py-16 bg-gray-50">
+      <div
+        class="max-w-7xl mx-auto px-4 flex justify-center items-center flex-col sm:flex-row sm:space-x-4 text-center"
+      >
+        <div class="sm:text-right">
+          <h1
+            class="font-extrabold text-transparent text-4xl sm:text-5xl uppercase pb-4 bg-clip-text bg-gradient-to-tr from-blue-500 to-cyan-500"
+          >
+            {{ "OUR_PROGRAM.SPEAKING" | translate }}
+          </h1>
+          <p class="text-2xl">
+            {{ "OUR_PROGRAM.SPEAKING_PARAGRAPH" | translate }}
+          </p>
+        </div>
+        <div>
+          <ng-lottie [options]="speakingOptions"></ng-lottie>
+        </div>
+      </div>
+    </div>
+    <div class="py-16 bg-white">
+      <div
+        class="max-w-7xl mx-auto px-4 flex justify-center items-center flex-col sm:flex-row sm:space-x-4 text-center"
+      >
+        <div class="order-2">
+          <ng-lottie [options]="singingOptions"></ng-lottie>
+        </div>
+        <div class="sm:order-2 sm:text-left">
+          <h1
+            class="font-extrabold text-transparent text-4xl sm:text-5xl uppercase pb-4 bg-clip-text bg-gradient-to-tr from-teal-600 to-lime-500"
+          >
+            {{ "OUR_PROGRAM.SINGING" | translate }}
+          </h1>
+          <p
+            class="text-2xl"
+            innerHTML="{{ 'OUR_PROGRAM.SINGING_PARAGRAPH' | translate }}"
+          ></p>
+        </div>
+      </div>
+    </div>
+    <div class="py-16 bg-gray-50">
+      <div
+        class="max-w-7xl mx-auto px-4 flex space-y-8 sm:space-y-0 justify-center items-center flex-col sm:flex-row sm:space-x-4 text-center"
+      >
+        <div class="sm:text-right">
+          <h1
+            class="font-extrabold text-transparent text-4xl sm:text-5xl uppercase pb-4 bg-clip-text bg-gradient-to-tr from-indigo-600 to-fuchsia-500"
+          >
+            {{ "OUR_PROGRAM.MOVING" | translate }}
+          </h1>
+          <p
+            class="text-2xl"
+            innerHTML="{{ 'OUR_PROGRAM.MOVING_PARAGRAPH' | translate }}"
+          ></p>
+        </div>
+        <div class="w-1/2 sm:w-1/3">
+          <ng-lottie [options]="movingOptions"></ng-lottie>
+        </div>
+      </div>
+    </div>
+    <div class="py-16 bg-white">
+      <div
+        class="max-w-7xl mx-auto px-4 flex space-y-10 sm:space-y-0 justify-center items-center flex-col sm:flex-row sm:space-x-4 text-center"
+      >
+        <div class="order-2 w-3/4 sm:w-1/2">
+          <ng-lottie [options]="readingOptions"></ng-lottie>
+        </div>
+        <div class="sm:text-left sm:order-2">
+          <h1
+            class="font-extrabold text-transparent text-4xl sm:text-5xl uppercase pb-4 bg-clip-text bg-gradient-to-tr from-red-700 to-pink-500"
+          >
+            {{ "OUR_PROGRAM.READING" | translate }}
+          </h1>
+          <p
+            class="text-2xl"
+            innerHTML="{{ 'OUR_PROGRAM.READING_PARAGRAPH' | translate }}"
+          ></p>
+        </div>
+      </div>
+    </div>
+    <div class="py-16 bg-gray-50">
+      <div
+        class="max-w-7xl mx-auto px-4 flex justify-center items-center flex-col sm:flex-row sm:space-x-4 text-center"
+      >
+        <div class="sm:text-right">
+          <h1
+            class="font-extrabold text-transparent text-4xl sm:text-5xl uppercase pb-4 bg-clip-text bg-gradient-to-tr from-orange-600 to-yellow-500"
+          >
+            {{ "OUR_PROGRAM.CREATING" | translate }}
+          </h1>
+          <p
+            class="text-2xl"
+            innerHTML="{{ 'OUR_PROGRAM.CREATING_PARAGRAPH' | translate }}"
+          ></p>
+        </div>
+        <div class="w-3/4 sm:w-1/3">
+          <ng-lottie [options]="creatingOptions"></ng-lottie>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
