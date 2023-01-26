@@ -7,7 +7,7 @@ import {
 } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
-import { ServicesComponent } from '../../components/services/services.component';
+import { OurProgramComponent } from '../../components/our-program/our-program.component';
 
 @Component({
   selector: 'app-header',

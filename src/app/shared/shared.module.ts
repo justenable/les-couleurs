@@ -6,16 +6,18 @@ import { TranslateModule } from '@ngx-translate/core';
 import { LottieModule } from 'ngx-lottie';
 import { HomeComponent } from './components/home/home.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
-import { ServicesComponent } from './components/services/services.component';
+import { OurProgramComponent } from './components/our-program/our-program.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { HeaderComponent } from './layout/header/header.component';
+import { ToggleComponent } from './components/toggle/toggle.component';
 
 const declarations = [
   HeaderComponent,
   FooterComponent,
   AboutUsComponent,
-  ServicesComponent,
+  OurProgramComponent,
   HomeComponent,
+  ToggleComponent,
 ];
 
 const imports = [

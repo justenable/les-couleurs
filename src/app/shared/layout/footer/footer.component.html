@@ -46,7 +46,7 @@
         [href]="encodeURI(whatsappLink)"
         target="_blank"
         class="py-2 px-6 uppercase text-bold hover:text-cyan-500 rounded-full hover:bg-white shadow-sm hover:shadow-lg transition-all border border-white text-white hover:border-transparent"
-        >Enroll Now</a
+        >{{ "GLOBAL.ENROLL_NOW" | translate }}</a
       >
     </div>
   </div>
@@ -54,7 +54,7 @@
     <p>
       <a class="font-bold hover:underline text-gray-200" routerLink="/"
         >Les Couleurs</a
-      >. 2023 &copy; All rights reserved.
+      >. {{ currentYear }} &copy; {{ 'GLOBAL.ALL_RIGHTS_RESERVED' | translate }}
     </p>
   </div>
 </div>

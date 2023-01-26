@@ -3,10 +3,10 @@ import { AnimationOptions } from 'ngx-lottie';
 
 @Component({
   selector: 'app-services',
-  templateUrl: './services.component.html',
-  styleUrls: ['./services.component.scss'],
+  templateUrl: './our-program.component.html',
+  styleUrls: ['./our-program.component.scss'],
 })
-export class ServicesComponent {
+export class OurProgramComponent {
   speakingOptions: AnimationOptions = {
     path: '/assets/img/speaking.json',
   };

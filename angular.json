@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "toddler-fr-classes": {
+    "les-couleurs": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/toddler-fr-classes",
+            "outputPath": "dist/les-couleurs",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -71,10 +71,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "toddler-fr-classes:build:production"
+              "browserTarget": "les-couleurs:build:production"
             },
             "development": {
-              "browserTarget": "toddler-fr-classes:build:development"
+              "browserTarget": "les-couleurs:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -82,7 +82,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "toddler-fr-classes:build"
+            "browserTarget": "les-couleurs:build"
           }
         },
         "test": {

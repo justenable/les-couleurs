@@ -10,11 +10,8 @@
     <div class="relative flex items-center justify-between">
       <div class="absolute inset-y-0 left-0 flex items-center">
         <!-- Mobile menu button-->
-       
       </div>
-      <div
-        class="flex flex-1 items-center justify-center"
-      >
+      <div class="flex flex-1 items-center justify-center">
         <!-- <div class="flex flex-shrink-0 items-center">
           <img
             class="block h-8 w-auto lg:hidden"
@@ -27,7 +24,7 @@
             alt="Your Company"
           />
         </div> -->
-        <div class=" sm:ml-6 sm:block">
+        <div class="sm:ml-6 sm:block">
           <div class="flex">
             <a
               title="{{ 'GLOBAL.HOME' | translate }}"
@@ -62,6 +59,7 @@
               class="px-5 py-3 rounded-t-md font-semibold uppercase transition-all border-b-4 border-transparent hover:bg-green-500 hover:text-white text-lg"
               >{{ "GLOBAL.ABOUT_US" | translate }}</a
             >
+            <!-- <app-toggle></app-toggle> -->
           </div>
         </div>
       </div>
@@ -90,6 +88,21 @@
         class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
         >{{ "GLOBAL.ABOUT_US" | translate }}</a
       >
+      <div class="flex justify-center">
+        <div class="form-check form-switch">
+          <input
+            class="form-check-input appearance-none w-9 -ml-10 rounded-full float-left h-5 align-top bg-white bg-no-repeat bg-contain bg-gray-300 focus:outline-none cursor-pointer shadow-sm"
+            type="checkbox"
+            role="switch"
+            id="flexSwitchCheckDefault"
+          />
+          <label
+            class="form-check-label inline-block text-gray-800"
+            for="flexSwitchCheckDefault"
+            >Default switch checkbox input</label
+          >
+        </div>
+      </div>
     </div>
   </div>
 </nav>

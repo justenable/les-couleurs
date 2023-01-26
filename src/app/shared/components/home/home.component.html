@@ -3,10 +3,12 @@
     <div
       class="relative flex space-y-12 justify-center flex-col h-full mx-auto items-center z-10 text-center text-white text-2xl max-w-7xl"
     >
-      <!-- <h1 class="text-8xl font-bold text-center mb-10">Les Couleurs</h1> -->
-
       <div class="flex justify-center items-center">
-        <img class="rounded-full shadow-lg w-3/4 " src="./assets/img/logo.jpg" alt="" />
+        <img
+          class="rounded-full shadow-lg w-3/4"
+          src="./assets/img/logo.jpg"
+          alt=""
+        />
       </div>
       <h2 class="text-3xl w-3/4">
         {{ "GLOBAL.CLASSES_FOR_TODDLERS" | translate }}
@@ -20,25 +22,28 @@
       <div
         class="bg-gradient-to-br from-blue-500 to-cyan-500 p-4 rounded-md shadow-md w-full flex items-center justify-center"
       >
-        <p class="text-white">
-          2023 Annual Registration Fee:
-          <span class="font-bold">R100 (once Off)</span>
-        </p>
+        <p
+          class="text-white"
+          innerHTML="{{
+            'GLOBAL.ANNUAL_REGISTRATION_FEE' | translate : { currentYear }
+          }}"
+        ></p>
       </div>
       <div
         class="bg-gradient-to-br from-red-500 to-amber-600 p-4 rounded-md shadow-md w-full flex items-center justify-center"
       >
-        <p class="text-white">
-          2023 Term Fee: <span class="font-bold">R895</span> Pro rata (Every 3
-          Months)
-        </p>
+        <p
+          class="text-white"
+          innerHTML="{{ 'GLOBAL.TERM_FEE' | translate : { currentYear } }}"
+        ></p>
       </div>
       <div
         class="bg-gradient-to-br from-emerald-600 to-green-500 p-4 rounded-md shadow-md w-full flex items-center justify-center"
       >
-        <p class="text-white">
-          2023 monthly fee: <span class="font-bold">R350</span>
-        </p>
+        <p
+          class="text-white"
+          innerHTML="{{ 'GLOBAL.MONTHLY_FEE' | translate : { currentYear } }}"
+        ></p>
       </div>
     </div>
     <div class="text-2xl text-center">
@@ -50,7 +55,7 @@
         [href]="encodeURI(whatsappLink)"
         target="_blank"
         class="py-4 px-10 uppercase text-bold text-2xl hover:text-white rounded-full hover:bg-red-600 shadow-sm hover:shadow-lg transition-all outline outline-red-500 text-red-500 hover:outline-transparent"
-        >Enroll Now</a
+        >{{ "GLOBAL.ENROLL_NOW" | translate }}</a
       >
     </div>
   </div>
