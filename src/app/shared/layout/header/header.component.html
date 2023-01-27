@@ -22,18 +22,18 @@
                 <div
                   class="h-1 w-3/4 ml-auto bg-gradient-to-br from-red-500 to-amber-600 transition-all duration-300 absolute -top-2 right-0"
                   [ngClass]="{
-                    'w-full top-0 rotate-45 z-10': menuIsExpanded,
+                    'w-full top-0 -rotate-45 z-10': menuIsExpanded,
                     'w-3/4': !menuIsExpanded
                   }"
                 ></div>
                 <div
                   class="h-1 w-full bg-gradient-to-tr from-blue-500 to-cyan-500 transition-all duration-300 absolute"
-                  [ngClass]="{ 'rotate-[135deg]': menuIsExpanded }"
+                  [ngClass]="{ '-rotate-[135deg]': menuIsExpanded }"
                 ></div>
                 <div
                   class="h-1 bg-gradient-to-br from-emerald-600 to-green-500 transition-all duration-200 absolute -bottom-3"
                   [ngClass]="{
-                    'w-full bottom-0 -rotate-45 from-transparent to-transparent':
+                    'w-full bottom-0 rotate-45 from-transparent to-transparent':
                       menuIsExpanded,
                     'w-3/4': !menuIsExpanded
                   }"
@@ -57,7 +57,7 @@
                   'text-white bg-gradient-to-t from-red-500 to-amber-600':
                     activeRoute == '/'
                 }"
-                class="px-5 py-3 rounded-t-md font-semibold uppercase transition-all hover:bg-gradient-to-t hover:from-red-500 hover:to-amber-600 hover:text-white text-lg"
+                class="text-center px-5 py-3 rounded-t-md font-semibold uppercase transition-all hover:bg-gradient-to-t hover:from-red-500 hover:to-amber-600 hover:text-white text-lg"
                 aria-current="page"
                 >{{ "GLOBAL.HOME" | translate }}</a
               >
@@ -71,7 +71,7 @@
                     activeRoute == '/#our-program'
                 }"
                 (click)="scrollToFragment('our-program')"
-                class="px-5 py-3 rounded-t-md font-semibold uppercase transition-all hover:bg-gradient-to-t hover:from-blue-500 hover:to-cyan-500 hover:text-white text-lg"
+                class="text-center px-5 py-3 rounded-t-md font-semibold uppercase transition-all hover:bg-gradient-to-t hover:from-blue-500 hover:to-cyan-500 hover:text-white text-lg"
                 >{{ "GLOBAL.OUR_PROGRAM" | translate }}</a
               >
 
@@ -84,11 +84,11 @@
                     activeRoute == '/#about-us'
                 }"
                 (click)="scrollToFragment('about-us')"
-                class="px-5 py-3 rounded-t-md font-semibold uppercase transition-all hover:bg-gradient-to-br hover:from-emerald-600 hover:to-green-500 hover:text-white text-lg"
+                class=" text-center px-5 py-3 rounded-t-md font-semibold uppercase transition-all hover:bg-gradient-to-br hover:from-emerald-600 hover:to-green-500 hover:text-white text-lg"
                 >{{ "GLOBAL.ABOUT_US" | translate }}</a
               >
             </div>
-            <!-- <app-language class="ml-auto order-3 w-40"></app-language> -->
+            <app-language class="ml-auto order-3 w-40"></app-language>
           </div>
         </div>
       </div>

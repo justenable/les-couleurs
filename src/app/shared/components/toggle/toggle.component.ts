@@ -17,6 +17,6 @@ export class ToggleComponent {
   }
 
   setLanguage(isEnglish: boolean) {
-    this.translate.setDefaultLang(isEnglish ? 'en' : 'fr');
+    this.translate.use(isEnglish ? 'en' : 'fr');
   }
 }

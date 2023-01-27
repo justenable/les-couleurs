@@ -3,16 +3,54 @@
     class="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold relative h-36 sm:h-56 md:h-64 lg:h-96"
   >
     <div class="relative z-10 clip-wrap h-full w-full">
-      <div class="left diagonal-left">
+      <div [ngSwitch]="currentLang" class="left diagonal-left">
         <h1
+          *ngSwitchCase="'en'"
           class="opacity-90 mb-2 sm:mr-44 mr-[104px] sm:mb-4 md:mb-6 md:mr-52 lg:mr-[268px] lg:mb-8 text-white"
+        >
+          {{ "GLOBAL.ABOUT" | translate }}
+        </h1>
+        <h1
+          *ngSwitchCase="'fr'"
+          class="opacity-90 mb-2 sm:mr-64 mr-[152px] sm:mb-4 md:mb-6 md:mr-72 lg:mr-96 lg:mb-8 text-white"
+        >
+          {{ "GLOBAL.ABOUT" | translate }}
+        </h1>
+        <h1
+          *ngSwitchCase="'af'"
+          class="opacity-90 mb-2 sm:mr-28 mr-16 sm:mb-4 md:mb-6 md:mr-32 lg:mr-40 lg:mb-8 text-white"
+        >
+          {{ "GLOBAL.ABOUT" | translate }}
+        </h1>
+        <h1
+          *ngSwitchCase="'zu'"
+          class="opacity-90 mb-2 sm:mr-36 mr-[88px] sm:mb-4 md:mb-6 md:mr-44 lg:mr-56 lg:mb-8 text-white"
         >
           {{ "GLOBAL.ABOUT" | translate }}
         </h1>
       </div>
     </div>
-    <div class="diagonal-right right">
+    <div [ngSwitch]="currentLang" class="diagonal-right right">
       <h1
+        *ngSwitchCase="'en'"
+        class="ml-6 mt-2 sm:ml-10 lg:ml-16 lg:mt-8 sm:mt-4 md:mt-6 md:ml-12 text-white"
+      >
+        {{ "GLOBAL.US" | translate }}
+      </h1>
+      <h1
+        *ngSwitchCase="'fr'"
+        class="ml-28 mt-2 sm:ml-48 lg:ml-72 lg:mt-8 sm:mt-4 md:mt-6 md:ml-56 text-white"
+      >
+        {{ "GLOBAL.US" | translate }}
+      </h1>
+      <h1
+        *ngSwitchCase="'af'"
+        class="ml-12 mt-2 sm:ml-24 lg:ml-28 lg:mt-8 sm:mt-4 md:mt-6 md:ml-20 text-white"
+      >
+        {{ "GLOBAL.US" | translate }}
+      </h1>
+      <h1
+        *ngSwitchCase="'zu'"
         class="ml-6 mt-2 sm:ml-10 lg:ml-16 lg:mt-8 sm:mt-4 md:mt-6 md:ml-12 text-white"
       >
         {{ "GLOBAL.US" | translate }}
