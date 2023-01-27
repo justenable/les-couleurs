@@ -1,15 +1,13 @@
 <!-- Not toggled switch -->
-<div class="w-full h-full flex flex-col justify-center items-center">
-  <div
-    class="flex justify-center items-center text-xl font-extrabold text-gray-300"
-  >
+<div class="h-full flex flex-col">
+  <div class="flex text-xl font-extrabold text-gray-300">
     <h1
       [ngClass]="{
         'text-transparent bg-clip-text bg-gradient-to-tr from-red-700 to-pink-500':
           !toggleActive
       }"
     >
-      EN
+      <span class="cursor-pointer" (click)="toggleActive = false">EN</span>
     </h1>
     <!-- Switch Container -->
     <div
@@ -17,12 +15,12 @@
         'bg-gradient-to-br from-blue-500 to-cyan-500': toggleActive,
         'bg-gradient-to-tr from-red-600 to-pink-500': !toggleActive
       }"
-      class="w-14 h-7 flex items-center bg-gray-300 rounded-full mx-3 px-1"
+      class="w-14 h-7 flex items-center bg-gray-300 rounded-full mx-3 px-1 cursor-pointer"
       (click)="handleToggleActive()"
     >
       <!-- Switch -->
       <div
-        class="bg-white w-5 h-5 rounded-full shadow-md transform"
+        class="bg-white w-5 h-5 rounded-full shadow-md transform transition-transform"
         [ngClass]="{ 'translate-x-7': toggleActive }"
       ></div>
     </div>
@@ -33,7 +31,7 @@
       }"
       class=""
     >
-      FR
+      <span class="cursor-pointer" (click)="toggleActive = true">FR</span>
     </h1>
   </div>
 </div>

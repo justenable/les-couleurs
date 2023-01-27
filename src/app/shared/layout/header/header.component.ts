@@ -16,6 +16,7 @@ import { OurProgramComponent } from '../../components/our-program/our-program.co
 })
 export class HeaderComponent implements OnInit {
   @Output() scrollTo = new EventEmitter<string>();
+  menuIsExpanded: boolean = false;
 
   activeRoute = 'blue';
   constructor(private router: Router) {}
@@ -24,12 +25,15 @@ export class HeaderComponent implements OnInit {
     this.router.events
       .pipe(filter((e) => e instanceof NavigationEnd))
       .subscribe((val: any) => {
-        console.log(val.url);
         this.activeRoute = val.url;
       });
   }
 
-  scrollToFragment(fragment: string) {
+  scrollToFragment(fragment: string): void {
     this.scrollTo.emit(fragment);
+  }
+
+  expandMenu(expand?: boolean): void {
+    this.menuIsExpanded = expand || !this.menuIsExpanded;
   }
 }

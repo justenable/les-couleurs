@@ -6,101 +6,90 @@
     'border-green-500': activeRoute == '/#about-us'
   }"
 >
-  <div class="mx-auto max-w-7xl px-2 lg:px-8 flex justify-center">
-    <div class="relative flex items-center justify-between">
+  <div class="mx-auto w-full max-w-7xl px-2 lg:px-8 flex justify-center">
+    <div class="relative w-full flex items-center justify-between">
       <div class="absolute inset-y-0 left-0 flex items-center">
         <!-- Mobile menu button-->
       </div>
       <div class="flex flex-1 items-center justify-center">
-        <!-- <div class="flex flex-shrink-0 items-center">
-          <img
-            class="block h-8 w-auto lg:hidden"
-            src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-            alt="Your Company"
-          />
-          <img
-            class="hidden h-8 w-auto lg:block"
-            src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-            alt="Your Company"
-          />
-        </div> -->
-        <div class="sm:ml-6 sm:block">
-          <div class="flex">
-            <a
-              title="{{ 'GLOBAL.HOME' | translate }}"
-              routerLink="/"
-              (click)="scrollToFragment('')"
-              [ngClass]="{ 'text-white bg-red-500': activeRoute == '/' }"
-              class="px-5 py-3 rounded-t-md font-semibold uppercase transition-all border-transparent hover:bg-red-500 hover:text-white text-lg"
-              aria-current="page"
-              >{{ "GLOBAL.HOME" | translate }}</a
+        <div class="flex flex-col md:flex-row w-full justify-between">
+          <div class="ml-auto sm:hidden">
+            <div
+              (click)="expandMenu()"
+              class="w-8 h-8 relative cursor-pointer rounded-full flex justify-center items-center mb-4 mr-2"
             >
-
-            <a
-              title="{{ 'GLOBAL.OUR_PROGRAM' | translate }}"
-              routerLink="/"
-              fragment="our-program"
-              [ngClass]="{
-                'text-white bg-blue-500': activeRoute == '/#our-program'
-              }"
-              (click)="scrollToFragment('our-program')"
-              class="px-5 py-3 rounded-t-md font-semibold uppercase transition-all border-b-4 border-transparent hover:bg-blue-500 hover:text-white text-lg"
-              >{{ "GLOBAL.OUR_PROGRAM" | translate }}</a
-            >
-
-            <a
-              title="{{ 'GLOBAL.ABOUT_US' | translate }}"
-              routerLink="/"
-              fragment="about-us"
-              [ngClass]="{
-                'text-white bg-green-500': activeRoute == '/#about-us'
-              }"
-              (click)="scrollToFragment('about-us')"
-              class="px-5 py-3 rounded-t-md font-semibold uppercase transition-all border-b-4 border-transparent hover:bg-green-500 hover:text-white text-lg"
-              >{{ "GLOBAL.ABOUT_US" | translate }}</a
-            >
-            <!-- <app-toggle></app-toggle> -->
+              <div class="relative w-full">
+                <div
+                  class="h-1 w-3/4 ml-auto bg-gradient-to-br from-red-500 to-amber-600 transition-all duration-300 absolute -top-2 right-0"
+                  [ngClass]="{
+                    'w-full top-0 rotate-45 z-10': menuIsExpanded,
+                    'w-3/4': !menuIsExpanded
+                  }"
+                ></div>
+                <div
+                  class="h-1 w-full bg-gradient-to-tr from-blue-500 to-cyan-500 transition-all duration-300 absolute"
+                  [ngClass]="{ 'rotate-[135deg]': menuIsExpanded }"
+                ></div>
+                <div
+                  class="h-1 bg-gradient-to-br from-emerald-600 to-green-500 transition-all duration-200 absolute -bottom-3"
+                  [ngClass]="{
+                    'w-full bottom-0 -rotate-45 from-transparent to-transparent':
+                      menuIsExpanded,
+                    'w-3/4': !menuIsExpanded
+                  }"
+                ></div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Mobile menu, show/hide based on menu state. -->
-  <div class="hidden" id="mobile-menu">
-    <div class="space-y-1 px-2 pt-2 pb-3">
-      <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-      <a
-        href="#"
-        class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
-        aria-current="page"
-        >{{ "GLOBAL.HOME" | translate }}</a
-      >
-
-      <a
-        href="#"
-        class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-        >{{ "GLOBAL.OUR_PROGRAM" | translate }}</a
-      >
-
-      <a
-        href="#"
-        class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-        >{{ "GLOBAL.ABOUT_US" | translate }}</a
-      >
-      <div class="flex justify-center">
-        <div class="form-check form-switch">
-          <input
-            class="form-check-input appearance-none w-9 -ml-10 rounded-full float-left h-5 align-top bg-white bg-no-repeat bg-contain bg-gray-300 focus:outline-none cursor-pointer shadow-sm"
-            type="checkbox"
-            role="switch"
-            id="flexSwitchCheckDefault"
-          />
-          <label
-            class="form-check-label inline-block text-gray-800"
-            for="flexSwitchCheckDefault"
-            >Default switch checkbox input</label
+          <div
+            class="max-h-0 overflow-hidden sm:overflow-visible transition-all sm:max-h-screen flex flex-col sm:flex-row sm:justify-between w-full"
+            [ngClass]="{
+              'max-h-screen': menuIsExpanded,
+              'overflow-visible': menuIsExpanded
+            }"
           >
+            <div class="flex flex-col sm:flex-row order-2">
+              <a
+                title="{{ 'GLOBAL.HOME' | translate }}"
+                routerLink="/"
+                (click)="scrollToFragment('')"
+                [ngClass]="{
+                  'text-white bg-gradient-to-t from-red-500 to-amber-600':
+                    activeRoute == '/'
+                }"
+                class="px-5 py-3 rounded-t-md font-semibold uppercase transition-all hover:bg-gradient-to-t hover:from-red-500 hover:to-amber-600 hover:text-white text-lg"
+                aria-current="page"
+                >{{ "GLOBAL.HOME" | translate }}</a
+              >
+
+              <a
+                title="{{ 'GLOBAL.OUR_PROGRAM' | translate }}"
+                routerLink="/"
+                fragment="our-program"
+                [ngClass]="{
+                  'text-white bg-gradient-to-t from-blue-500 to-cyan-500':
+                    activeRoute == '/#our-program'
+                }"
+                (click)="scrollToFragment('our-program')"
+                class="px-5 py-3 rounded-t-md font-semibold uppercase transition-all hover:bg-gradient-to-t hover:from-blue-500 hover:to-cyan-500 hover:text-white text-lg"
+                >{{ "GLOBAL.OUR_PROGRAM" | translate }}</a
+              >
+
+              <a
+                title="{{ 'GLOBAL.ABOUT_US' | translate }}"
+                routerLink="/"
+                fragment="about-us"
+                [ngClass]="{
+                  'text-white bg-gradient-to-b from-emerald-600 to-green-500':
+                    activeRoute == '/#about-us'
+                }"
+                (click)="scrollToFragment('about-us')"
+                class="px-5 py-3 rounded-t-md font-semibold uppercase transition-all hover:bg-gradient-to-br hover:from-emerald-600 hover:to-green-500 hover:text-white text-lg"
+                >{{ "GLOBAL.ABOUT_US" | translate }}</a
+              >
+            </div>
+            <!-- <app-language class="ml-auto order-3 w-40"></app-language> -->
+          </div>
         </div>
       </div>
     </div>

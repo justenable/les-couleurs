@@ -10,6 +10,7 @@ import { OurProgramComponent } from './components/our-program/our-program.compon
 import { FooterComponent } from './layout/footer/footer.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { ToggleComponent } from './components/toggle/toggle.component';
+import { LanguageComponent } from './components/language/language.component';
 
 const declarations = [
   HeaderComponent,
@@ -18,6 +19,7 @@ const declarations = [
   OurProgramComponent,
   HomeComponent,
   ToggleComponent,
+  LanguageComponent,
 ];
 
 const imports = [
@@ -28,7 +30,7 @@ const imports = [
   TranslateModule,
 ];
 @NgModule({
-  declarations,
+  declarations: [...declarations],
   imports,
   exports: [...declarations, ...imports],
 })

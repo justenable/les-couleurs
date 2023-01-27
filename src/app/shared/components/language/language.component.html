@@ -1,0 +1,49 @@
+<div class="relative mx-auto" [ngClass]="{ 'divide-y': showLanguageList }">
+  <div
+    (click)="showHideLanguageList()"
+    class="flex justify-center items-center cursor-pointer px-8 w-full"
+  >
+    <h1
+      class="font-extrabold uppercase text-xl text-transparent text-center bg-clip-text py-4 px-0"
+      [ngClass]="currentLanguage.bgColor"
+    >
+      {{ currentLanguage.code }}
+    </h1>
+    <div>
+      <svg
+        class="h-5 w-5 transition-transform text-gray-500"
+        [ngClass]="{ 'rotate-180': showLanguageList }"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        aria-hidden="true"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+          clip-rule="evenodd"
+        />
+      </svg>
+    </div>
+  </div>
+
+  <ul
+    class="shadow-xl space-y-1 divide-y absolute bg-white right-0 w-full rounded-b-lg overflow-hidden transition-all max-h-0"
+    [ngClass]="{ 'max-h-96': showLanguageList }"
+  >
+    <li
+      class="cursor-pointer py-2 text-center font-semibold hover:text-transparent bg-clip-text {{
+        lang.hoverColor
+      }}"
+      [ngClass]="
+        lang.code === currentLanguage.code
+          ? currentLanguage.bgColor + ' text-transparent text-lg font-extrabold'
+          : ''
+      "
+      (click)="setLanguage(lang)"
+      *ngFor="let lang of languages"
+    >
+      {{ "LANGUAGE." + lang.name | translate }}
+    </li>
+  </ul>
+</div>
