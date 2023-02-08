@@ -18,7 +18,7 @@ export class HeaderComponent implements OnInit {
   @Output() scrollTo = new EventEmitter<string>();
   menuIsExpanded: boolean = false;
 
-  activeRoute = 'blue';
+  activeRoute = '/';
   constructor(private router: Router) {}
 
   ngOnInit(): void {

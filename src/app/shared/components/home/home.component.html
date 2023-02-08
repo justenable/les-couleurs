@@ -52,7 +52,7 @@
     </div>
     <div class="flex justify-center items-center mt-10">
       <a
-        [href]="encodeURI(whatsappLink)"
+        [href]="encodeURI(whatsappLink) | async"
         target="_blank"
         class="py-4 px-10 uppercase text-bold text-2xl hover:text-white rounded-full hover:bg-red-600 shadow-sm hover:shadow-lg transition-all outline outline-red-500 text-red-500 hover:outline-transparent"
         >{{ "GLOBAL.ENROLL_NOW" | translate }}</a

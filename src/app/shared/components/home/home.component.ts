@@ -1,5 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { AnimationOptions } from 'ngx-lottie';
+import { map, Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -16,13 +18,13 @@ export class HomeComponent {
 
   currentYear: number = new Date().getFullYear();
 
-  encodeURI(whatsappLink: string): string {
-    return (
-      whatsappLink +
-      '?text=' +
-      encodeURIComponent(
-        'Hello there, I am interested in enorlling my toddler(s)'
-      )
-    );
+  constructor(private translate: TranslateService) {}
+
+  encodeURI(whatsappLink: string): Observable<string> {
+    return this.translate
+      .get('GLOBAL.WHATSAPP_MESSAGE')
+      .pipe(
+        map((message) => `${whatsappLink}?text=${encodeURIComponent(message)}`)
+      );
   }
 }
