@@ -27,7 +27,7 @@
         <h1
           class="text-white"
           *ngFor="let day of openWeekDays; let i = index"
-          [ngClass]="{ 'font-bold': i === todaysDay - 1 }"
+          [ngClass]="{ 'font-extrabold': i === todaysDay - 1 }"
         >
           {{ "WEEKDAYS." + day | translate }}:
           {{ hours.open + " - " + hours.close }}
