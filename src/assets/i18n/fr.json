@@ -6,7 +6,7 @@
 	"GLOBAL.ADDRESS": "Adresse",
 	"GLOBAL.ALL_RIGHTS_RESERVED": "Tous droits réservés",
 	"GLOBAL.ANNUAL_REGISTRATION_FEE": "{{ currentYear }} Frais d'inscription annuels : <span class=\"font-bold\">R100 (une fois)</span>",
-	"GLOBAL.CLASSES_FOR_TODDLERS": "Cours de français pour les tout-petits (3 à 6 ans) Dans l'environnement familier de leur école.",
+	"GLOBAL.CLASSES_FOR_TODDLERS": "Cours de français pour les tout-petits (3 à 10 ans) Dans l'environnement familier de leur école.",
 	"GLOBAL.CLOSED": "Fermé",
 	"GLOBAL.ENROLL_NOW": "S'inscrire maintenant",
 	"GLOBAL.HOME": "Accueil",

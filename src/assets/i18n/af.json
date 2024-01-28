@@ -6,7 +6,7 @@
 	"GLOBAL.ADDRESS": "Adres",
 	"GLOBAL.ALL_RIGHTS_RESERVED": "Alle regte voorbehou",
 	"GLOBAL.ANNUAL_REGISTRATION_FEE": "{{ currentYear }} Jaarlikse registrasiefooi: <span class=\"font-bold\">R100 (eenmalig)</span>",
-	"GLOBAL.CLASSES_FOR_TODDLERS": "Franse klasse vir kleuters (ouderdomme 3–6) in die bekende omgewing van hul skool.",
+	"GLOBAL.CLASSES_FOR_TODDLERS": "Franse klasse vir kleuters (ouderdomme 3–10) in die bekende omgewing van hul skool.",
 	"GLOBAL.CLOSED": "Gesluit",
 	"GLOBAL.ENROLL_NOW": "Skryf nou in",
 	"GLOBAL.HOME": "Huis",
